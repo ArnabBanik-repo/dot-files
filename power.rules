@@ -1,0 +1,2 @@
+ACTION=="change", SUBSYSTEM=="power_supply", ATTR{type}=="Mains", ATTR{online}=="1", ENV{DISPLAY}=":0", ENV{XAUTHORITY}="/home/arnab/.Xauthority" RUN+="/usr/bin/su arnab -c '/home/arnab/.local/bin/chargingnotify 1'"
+ACTION=="change", SUBSYSTEM=="power_supply", ATTR{type}=="Mains", ATTR{online}=="0", ENV{DISPLAY}=":0", ENV{XAUTHORITY}="/home/arnab/.Xauthority" RUN+="/usr/bin/su arnab -c '/home/arnab/.local/bin/chargingnotify 0'"
